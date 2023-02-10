@@ -1,0 +1,17 @@
+{
+    "banana": {
+        "calories": 105,
+        "price": 0.3,
+        "count": 0
+    },
+    "navel_orange": {
+        "calories": 70,
+        "price": 1.0,
+        "count": 0
+    },
+    "eggs": {
+        "calories": 70,
+        "price": 0.34,
+        "count": 0
+    }
+}

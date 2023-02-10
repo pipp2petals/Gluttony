@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block head %}
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/style.css') }}">
+{% endblock %}
+
+{% block body %}
+	<main id="items">
+		{% for item in items %}
+			<div class="item">
+
+				<div class="counter">
+					{{ items[item]["count"] }}
+				</div>
+				<form class="addsub" method="post">
+					<button type="submit" name="{{ item }}" value="add">+</button>
+					<button type="submit" name="{{ item }}" value="sub">-</button>
+				</form>
+					
+				<img src="static/img/{{ item }}.webp" class="item-img">
+			</div>
+
+			<!-- <div class="item">
+				<form action="#" method="post" class="item-math">
+					<button class="item-add" type="submit" name="{{ item }}" value="add">Add</button>
+					<button class="item-sub" type="submit" name="{{ item }}" value="sub">Sub</button>
+				</form>
+				<a href="">
+					<img src="static/img/{{ item }}.webp" class="item-img">
+				</a>
+
+				<label class="item-ct">{{ items[item]["count"] }}</label>
+			</div> -->
+		{% endfor %}
+	</main>
+
+	<article id="stats">
+		<div id="stat-div">
+			<h3>Price</h3>
+			<p> {{ stats["price"] }}</p>
+			<h3>Calories</h3>
+			<p> {{ stats["calories"] }}</p>
+		</div>
+	</article>
+	
+{% endblock %}
